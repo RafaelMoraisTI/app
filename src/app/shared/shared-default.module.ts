@@ -20,6 +20,8 @@ import {InputMaskModule} from "primeng/inputmask";
 import {InputTextareaModule} from "primeng/inputtextarea";
 import {RadioButtonModule} from "primeng/radiobutton";
 import {AutoCompleteModule} from "primeng/autocomplete";
+import {Layout1Module} from "../layout/layout/layout.module";
+import {LayoutModule} from "../layout/layout.module";
 
 @NgModule({
     declarations: [],
@@ -45,6 +47,7 @@ import {AutoCompleteModule} from "primeng/autocomplete";
         InputTextareaModule,
         RadioButtonModule,
         AutoCompleteModule,
+        LayoutModule,
     ],
     exports: [
         CommonModule,
@@ -68,6 +71,7 @@ import {AutoCompleteModule} from "primeng/autocomplete";
         InputTextareaModule,
         RadioButtonModule,
         AutoCompleteModule,
+        LayoutModule,
     ],
     providers: [
         ConfirmationService,

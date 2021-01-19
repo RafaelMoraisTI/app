@@ -1,4 +1,4 @@
-<div class="navbar-container" [class.example-is-mobile]="mobileQuery.matches">
+<div class="navbar-container">
 
   <!-- Top navbar -->
 
@@ -11,7 +11,7 @@
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <a class="navbar-brand" [routerLink]="['/']" matTooltip="Inicio">
+    <a class="navbar-brand" matTooltip="Inicio">
       <h1>
         Cobrança
       </h1>
@@ -38,17 +38,16 @@
     <button mat-button [matMenuTriggerFor]="userMenu">
       <mat-icon>person</mat-icon>
       <span fxShow fxHide.xs>
-        {{userName}}
       </span>
     </button>
     <mat-menu #userMenu="matMenu" xPosition="before" yPosition="above" [overlapTrigger]="false">
 
-      <a mat-menu-item routerLink="['/account/profile']">
+      <a mat-menu-item>
         <mat-icon>person</mat-icon>
         <span>Conta</span>
       </a>
 
-      <a mat-menu-item routerLink="['/auth/login']">
+      <a mat-menu-item>
         <mat-icon>exit_to_app</mat-icon>
         <span>Sair</span>
       </a>
@@ -58,38 +57,37 @@
   </mat-toolbar>
   <mat-sidenav-container class="navbar-sidenav-container">
     <!-- Side nav -->
-    <mat-sidenav #snav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav">
+    <mat-sidenav #snav [opened]="true" class="sidenav">
 
       <mat-nav-list>
         <h3 mat-subheader>Inicio</h3>
 
-        <a mat-list-item [routerLink]="['/inicio']" routerLinkActive="active">
+        <a mat-list-item >
           <mat-icon mat-list-icon>
             home
           </mat-icon>
           <p mat-line> Inicio </p>
         </a>
 
-        <a mat-list-item [routerLink]="['/dividas']" routerLinkActive="active">
+        <a mat-list-item>
           <mat-icon mat-list-icon>
             account_balance
           </mat-icon>
           <p mat-line> Dividas </p>
         </a>
-        <a mat-list-item routerLink="['/users']" routerLinkActive="active">
+        <a mat-list-item >
           <mat-icon mat-list-icon>
             people
           </mat-icon>
           <p mat-line> Usuários </p>
         </a>
 
-        <a mat-list-item routerLink="['/account/profile']">
+        <a mat-list-item >
           <mat-icon mat-list-icon>person</mat-icon>
           <p mat-line> Conta </p>
         </a>
 
-        <a mat-list-item routerLink="['/auth/login']">
+        <a mat-list-item >
           <mat-icon mat-list-icon>exit_to_app</mat-icon>
           <p mat-line> Sair </p>
         </a>
@@ -114,7 +112,7 @@
   </mat-sidenav-container>
   <mat-toolbar class="navbar" color="primary">
     <div class="navbar-brand">
-      <h1>Elyon Tecnologia - Todos os direitos reservados</h1>
+      <h1>roda-pé</h1>
     </div>
 
   </mat-toolbar>
