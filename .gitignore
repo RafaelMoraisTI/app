@@ -48,3 +48,4 @@ Thumbs.db
 # Environment Variables
 .env
 .env.build
+/package-lock.json
